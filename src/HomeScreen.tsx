@@ -1,18 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, YStack } from 'tamagui';
 
 export function HomeScreen() {
   return (
-    <View style={styles.container}>
+    <YStack flex={1} justifyContent="center" alignItems="center">
       <Text>Hello World</Text>
-    </View>
+    </YStack>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
