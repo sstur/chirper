@@ -1,4 +1,4 @@
-import { Text } from 'tamagui';
+import { Spinner, Text, YStack } from 'tamagui';
 import { useQuery } from '@apollo/client';
 
 import { PostList } from '../components/PostList';
@@ -11,7 +11,11 @@ export function HomeScreen() {
     return <Text>{String(error)}</Text>;
   }
   if (!data) {
-    return <Text>Loading...</Text>;
+    return (
+      <YStack flex={1} justifyContent="center" alignItems="center">
+        <Spinner />
+      </YStack>
+    );
   }
   return <PostList posts={data.posts} />;
 }
