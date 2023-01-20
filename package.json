@@ -4,6 +4,7 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
+    "codegen": "yarn graphql-codegen -c src/cli/codegen.ts",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --max-warnings 0 .",
     "test": "npm run typecheck && npm run lint"
@@ -32,10 +33,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@graphql-codegen/cli": "^2.16.4",
+    "@graphql-codegen/client-preset": "^1.2.6",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "eslint": "^8.32.0",
     "eslint-config-react-app": "^7.0.1",
-    "prettier": "^2.8.3"
+    "prettier": "^2.8.3",
+    "ts-node": "^10.9.1"
   },
   "eslintConfig": {
     "extends": "react-app"
