@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "TAMAGUI_TARGET=native expo start",
+    "start": "expo start",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --max-warnings 0 .",
     "test": "npm run typecheck && npm run lint"
@@ -16,6 +16,7 @@
     "@tamagui/theme-base": "^1.0.17",
     "@types/react": "~18.0.24",
     "@types/react-native": "~0.70.6",
+    "dotenv": "^16.0.3",
     "expo": "~47.0.12",
     "expo-linear-gradient": "~12.0.1",
     "expo-splash-screen": "~0.17.5",
