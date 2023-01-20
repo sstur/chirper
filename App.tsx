@@ -5,6 +5,7 @@ import { TamaguiProvider } from 'tamagui';
 
 import config from './tamagui.config';
 import { Navigation } from './src/Navigation';
+import { ApolloProvider } from './src/ApolloProvider';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -19,9 +20,11 @@ export default function App() {
   return (
     <>
       <StatusBar style="auto" />
-      <TamaguiProvider config={config}>
-        <Navigation />
-      </TamaguiProvider>
+      <ApolloProvider>
+        <TamaguiProvider config={config}>
+          <Navigation />
+        </TamaguiProvider>
+      </ApolloProvider>
     </>
   );
 }
