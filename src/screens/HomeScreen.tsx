@@ -1,9 +1,10 @@
-import { Text, YStack } from 'tamagui';
+import { Button, YStack } from 'tamagui';
+import { Plus } from '@tamagui/lucide-icons';
 
 export function HomeScreen() {
   return (
     <YStack flex={1} justifyContent="center" alignItems="center">
-      <Text>Hello World</Text>
+      <Button icon={Plus}>Press here</Button>
     </YStack>
   );
 }
