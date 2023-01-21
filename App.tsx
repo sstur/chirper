@@ -2,6 +2,7 @@
 import { useFonts } from 'expo-font';
 import { StatusBar } from 'expo-status-bar';
 import { TamaguiProvider } from 'tamagui';
+import { NavigationContainer } from '@react-navigation/native';
 
 import config from './tamagui.config';
 import { Navigation } from './src/Navigation';
@@ -24,7 +25,9 @@ export default function App() {
       <ApolloProvider>
         <TamaguiProvider config={config}>
           <AuthContextProvider>
-            <Navigation />
+            <NavigationContainer>
+              <Navigation />
+            </NavigationContainer>
           </AuthContextProvider>
         </TamaguiProvider>
       </ApolloProvider>
